@@ -18,7 +18,14 @@ namespace GameProject
             int group = int.Parse(Console.ReadLine());
             Console.Write("How many balls do you want to pick : ");
             int balls = int.Parse(Console.ReadLine());
-            game.PickBall(group, balls);
+            try
+            {
+                game.PickBall(group, balls);
+            }catch(InvalidOperationException e)
+            {
+                Console.WriteLine(e.Message);
+                PickBall(game);
+            }
         }
 
         public string GetName()

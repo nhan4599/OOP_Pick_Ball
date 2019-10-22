@@ -42,19 +42,31 @@ namespace GameProject
             return false;
         }
 
-        public void PickBall(int group, int b)
+        public void PickBall(int group, int balls)
         {
+            InvalidOperationException eGroup = new InvalidOperationException("Group must be 1, 2 or 3");
+            InvalidOperationException eB = new InvalidOperationException("Balls must be greater than 0 and less or equal than balls remaining in group");
             if (group == 1)
             {
-                G1 -= b;
+                if (balls > G1)
+                    throw eB;
+                G1 -= balls;
             }
             else if (group == 2)
             {
-                G2 -= b;
+                if (balls > G1)
+                    throw eB;
+                G2 -= balls;
             }
             else if (group == 3)
             {
-                G3 -= b;
+                if (balls > G1)
+                    throw eB;
+                G3 -= balls;
+            }
+            else
+            {
+                throw eGroup;
             }
         }
     }

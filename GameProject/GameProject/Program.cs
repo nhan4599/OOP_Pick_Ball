@@ -6,8 +6,8 @@ namespace GameProject
     {
         static void Main(string[] args)
         {
-            Controller controller = new Controller();
-            controller.PlayGame();
+            //Controller controller = new Controller();
+            //controller.PlayGame();
         }
     }
 }
