@@ -43,7 +43,18 @@ namespace GameProject
 
         public void PickBall(int group, int b)
         {
-
+            if (group == 1)
+            {
+                G1 -= b;
+            }
+            else if (group == 2)
+            {
+                G2 -= b;
+            }
+            else if (group == 3)
+            {
+                G3 -= b;
+            }
         }
     }
 }
