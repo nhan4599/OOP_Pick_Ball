@@ -30,6 +30,7 @@ namespace GameProject
             {
                 Console.Write("o ");
             }
+            Console.WriteLine();
         }
 
         public bool IsGameOver()
