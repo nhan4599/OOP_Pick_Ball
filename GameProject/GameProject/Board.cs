@@ -40,5 +40,10 @@ namespace GameProject
             }
             return false;
         }
+
+        public void PickBall(int group, int b)
+        {
+
+        }
     }
 }
